@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:28:48 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/01 18:30:04 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:11:03 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 
 class   Brain
 {
-    private:
-        std::string _ideas[100];
+	private:
+		std::string _ideas[100];
 
-    public:
-        Brain();
-        ~Brain();    
+	public:
+		Brain();
+		Brain(const Brain &ref);
+		~Brain();
+		Brain   &operator=(const Brain &ref);
 };
 
 #endif

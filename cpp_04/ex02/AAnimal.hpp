@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 16:34:12 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/01 19:20:09 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:10:23 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ class	AAnimal
 	public:
 		AAnimal();
 		AAnimal(std::string type);
+		AAnimal( const AAnimal &ref );
 		virtual ~AAnimal();
+		AAnimal	&operator=( const AAnimal &ref );
 
 		std::string	getType() const;
 		virtual void	makeSound() const = 0;

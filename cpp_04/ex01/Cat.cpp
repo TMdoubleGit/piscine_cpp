@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 16:34:09 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/01 18:44:26 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:07:26 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,24 @@ Cat::Cat() : Animal("Cat")
 	this->_brain = new Brain();
 }
 
+Cat::Cat( const Cat &ref )
+{
+	std::cout << this->_type << " copy constructor called" << std::endl;
+	*this = ref;
+}
+
 Cat::~Cat()
 {
 	delete this->_brain;
 	std::cout << this->_type << " destructor called" << std::endl;
+}
+
+Cat &Cat::operator=( const Cat &ref )
+{
+	std::cout << this->_type << " assignation operator called" << std::endl;
+	this->_type = ref._type;
+	this->_brain = new Brain(*ref._brain);
+	return (*this);
 }
 
 void	Cat::makeSound() const
