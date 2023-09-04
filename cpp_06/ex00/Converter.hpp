@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Converter.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 04:14:18 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/04 11:05:45 by tmichel-         ###   ########.fr       */
+/*   Created: 2023/09/04 14:27:34 by tmichel-          #+#    #+#             */
+/*   Updated: 2023/09/04 14:37:09 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef CONVERTER_HPP
+# define CONVERTER_HPP
 
-int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+# include <iostream>
+# include <string>
 
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	
-	std::cout << b << std::endl;
-	
-	std::cout << Fixed::max( a, b ) << std::endl;
-	
-	return 0;
-}
+class Converter
+{
+	private:
+		char	_c;
+		int		_i;
+		float	_f;
+		double	_d;
+		
+		bool	_impossible;
+		
+	public:
+		Converter(void);
+		Converter(Converter const &src);
+		~Converter(void);
+		
+		Converter &operator=(Converter const &ref);
+		
+};
+
+#endif
