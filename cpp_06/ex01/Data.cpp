@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:27:45 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/11 16:15:45 by tmichel-         ###   ########.fr       */
+/*   Created: 2023/09/12 18:11:56 by tmichel-          #+#    #+#             */
+/*   Updated: 2023/09/12 18:26:59 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Data.hpp"
 
-int main(int ac, char **av)
+uintptr_t serialize(Data *data)
 {
-	if (ac != 2)
-	{
-		std::cout << "Wrong number of arguments" << std::endl;
-		return (1);
-	}
-	ScalarConverter sc;
-	try
-	{
-		sc.setStr(av[1]);
-		sc.convert();
-		std::cout << sc;
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << "Error: " << e.what() << std::endl;
-	}
-	return (0);
+	return (reinterpret_cast<uintptr_t>(data));
+}
+
+Data *deserialize(uintptr_t ptr)
+{
+	return (reinterpret_cast<Data *>(ptr));
 }

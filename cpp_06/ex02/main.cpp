@@ -6,29 +6,28 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:27:45 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/11 16:15:45 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:57:29 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
-int main(int ac, char **av)
+int main()
 {
-	if (ac != 2)
+	srand(time(NULL));
+	
+	for (int i = 0; i < 10; i++)
 	{
-		std::cout << "Wrong number of arguments" << std::endl;
-		return (1);
-	}
-	ScalarConverter sc;
-	try
-	{
-		sc.setStr(av[1]);
-		sc.convert();
-		std::cout << sc;
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << "Error: " << e.what() << std::endl;
+		Base *o = generate();
+		std::cout << "Test " << i << ": ";
+		identify(o);
+		std::cout << ", ";
+		identify(*o);
+		std::cout << std::endl;
+		delete o;
 	}
 	return (0);
 }

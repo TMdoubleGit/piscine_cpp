@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 14:27:45 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/11 16:15:45 by tmichel-         ###   ########.fr       */
+/*   Created: 2023/09/12 18:11:52 by tmichel-          #+#    #+#             */
+/*   Updated: 2023/09/12 18:55:48 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef B_HPP
+# define B_HPP
 
-int main(int ac, char **av)
+# include "Base.hpp"
+
+class B: public Base
 {
-	if (ac != 2)
-	{
-		std::cout << "Wrong number of arguments" << std::endl;
-		return (1);
-	}
-	ScalarConverter sc;
-	try
-	{
-		sc.setStr(av[1]);
-		sc.convert();
-		std::cout << sc;
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << "Error: " << e.what() << std::endl;
-	}
-	return (0);
-}
+	public:
+		virtual ~B(){};
+};
+
+#endif

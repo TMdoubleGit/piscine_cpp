@@ -15,7 +15,8 @@
 
 # include <iostream>
 # include <fstream>
-#include <limits>
+# include <climits>
+# include <sstream>
 
 enum	input_type
 {
@@ -67,12 +68,12 @@ class ScalarConverter
 		input_type	getType() const;
 		void		setType();
 
-		bool		isChar() const;
-		bool		isInt() const;
-		bool		isFloat() const;
-		bool		isDouble() const;
+		bool		isChar();
+		bool		isInt();
+		bool		isFloat();
+		bool		isDouble();
 		
-		bool		isImpossible() const;
+		bool		isImpossible();
 		bool 		isLiteral() const;
 
 		void		printChar() const;

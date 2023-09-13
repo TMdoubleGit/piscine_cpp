@@ -1,4 +1,4 @@
-NAME	= convert
+NAME	= Identify
 
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -6,11 +6,11 @@ RM		= rm -rf
 
 OBJDIR	= .obj
 
-SRCS	= ScalarConverter main
+SRCS	= Base main
 
 SRC		= $(SRCS:=.cpp)
 OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
-HEADER	= ScalarConverter.hpp
+HEADER	= Base.hpp A.hpp B.hpp C.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
