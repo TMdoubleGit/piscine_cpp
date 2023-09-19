@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Base main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
 HEADER	= Base.hpp A.hpp B.hpp C.hpp
 
 #Colors:

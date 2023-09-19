@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 12:48:05 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/02 12:50:58 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:13:49 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ Ice::Ice() : AMateria("ice")
 {
 }
 
-Ice::Ice(std::string const &type) : AMateria(type)
+Ice::Ice(std::string const &type) : AMateria("ice")
 {
 }
 
 Ice::Ice(Ice const &ref) : AMateria(ref)
 {
+	*this = ref;
 }
 
 Ice::~Ice()

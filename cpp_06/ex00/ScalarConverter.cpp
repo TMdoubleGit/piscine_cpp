@@ -303,7 +303,7 @@ void		ScalarConverter::printDouble() const
 	return ;
 }
 
-std::ostream &operator<<(std::ostream &out |  ScalarConverter const &ref)
+std::ostream &operator<<(std::ostream &out, ScalarConverter const &ref)
 {
 	ref.printChar();
 	ref.printInt();

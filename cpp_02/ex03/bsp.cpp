@@ -6,13 +6,13 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 21:39:32 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/28 22:47:50 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-bool	bsp(Point const a |  Point const b |  Point const c |  Point const point)
+bool	bsp(Point const a, Point const b, Point const c, Point const point)
 {
 	Fixed const	ab = (b.getX() - a.getX()) * (point.getY() - a.getY()) - (b.getY() - a.getY()) * (point.getX() - a.getX());
 	Fixed const	bc = (c.getX() - b.getX()) * (point.getY() - b.getY()) - (c.getY() - b.getY()) * (point.getX() - b.getX());

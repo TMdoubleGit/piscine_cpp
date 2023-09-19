@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 11:22:21 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:06:27 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Intern
 		Intern( Intern const & src );
 		~Intern();
 		Intern &		operator=( Intern const & rhs );
-		AForm *makeForm(std::string name |  std::string target);
+		AForm *makeForm(std::string name, std::string target);
 };
 
 #endif

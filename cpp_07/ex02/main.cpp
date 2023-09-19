@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 10:12:47 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/14 10:39:57 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(void)
 		for (unsigned int i(0); i < d.size(); i++)
 			std::cout << "d[" << i << "] = " << d[i] << " ";
 		d = c;
-		std::cout << "After operating d = c |  we get:" << std::endl;
+		std::cout << "After operating d = c, we get:" << std::endl;
 		std::cout << "New size(d): " << d.size() << std::endl;
 		for (unsigned int i(0); i < d.size(); i++)
 			std::cout << "new d[" << i << "] = " << d[i] << " ";

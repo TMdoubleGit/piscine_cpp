@@ -9,7 +9,7 @@ OBJDIR		= .obj
 SRCS 		= Account tests
 
 SRC 		= $(SRCS:=.cpp)
-OBJ 		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
+OBJ 		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
 HEADER		= Account.hpp
 
 #Colors:
@@ -33,7 +33,7 @@ $(OBJDIR)/%.o: %.cpp $(HEADER)
 	@ $(CC) $(FLAGS) $(OPTS) -c $< -o $@
 
 clean:
-	@ $(RM) $(OBJDIR) $(OBJ)
+	@ $(RM) $(OBJ) $(OBJDIR) 
 	@ $(RM) $(NAME)
 	@ echo "$(YELLOW)$(NAME) has been removed$(RESET)"
 

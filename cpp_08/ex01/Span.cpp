@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:32:23 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:51:30 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ std::list<int> Span::getList() const
 	return (_list);
 }
 
-std::ostream &operator<<(std::ostream &o |  const Span &src)
+std::ostream &operator<<(std::ostream &o, const Span &src)
 {
 	std::list<int> list = src.getList();
 	for (std::list<int>::const_iterator it = list.begin(); it != list.end(); ++it)
@@ -61,12 +61,12 @@ void	Span::addNumber(int n)
 		throw Span::SpanFullException();
 }
 
-void	Span::addNumber(std::list<int>::const_iterator begin |  std::list<int>::const_iterator end)
+void	Span::addNumber(std::list<int>::const_iterator begin, std::list<int>::const_iterator end)
 {
 	std::cout << "Trying to add a range of numbers to the list" << std::endl;
-	if (_list.size() + std::distance(begin |  end) <= _n)
+	if (_list.size() + std::distance(begin, end) <= _n)
 	{
-		_list.insert(_list.end() |  begin |  end);
+		_list.insert(_list.end(), begin, end);
 		std::cout << "Added a range of numbers to the list" << std::endl;
 	}
 	else

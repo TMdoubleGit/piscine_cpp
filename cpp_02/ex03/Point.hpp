@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 21:39:46 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/28 22:58:27 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Point
 	public:
 		Point();
 		Point(const Point &ref);
-		Point(const float x |  const float y);
+		Point(const float x, const float y);
 		~Point();
 		Point   &operator=(const Point &ref);
 		
@@ -32,6 +32,6 @@ class Point
 		Fixed   getY() const;
 };
 
-bool	bsp(Point const a |  Point const b |  Point const c |  Point const point);
+bool	bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

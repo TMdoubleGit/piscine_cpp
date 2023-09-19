@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 21:38:54 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/28 23:04:30 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,13 @@ int		Fixed::toInt(void) const
 	return (_value >> _bits);
 }
 
-std::ostream	&operator<<(std::ostream &os |  const Fixed &ref)
+std::ostream	&operator<<(std::ostream &os, const Fixed &ref)
 {
 	os << ref.toFloat();
 	return (os);
 }
 
-std::istream	&operator>>(std::istream &is |  Fixed &ref)
+std::istream	&operator>>(std::istream &is, Fixed &ref)
 {
 	float	value = ref.toFloat();
 
@@ -165,22 +165,22 @@ Fixed	Fixed::operator--(int)
 	return (old);
 }
 
-const Fixed	&Fixed::min(const Fixed &a |  const Fixed &b)
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b)
 {
 	return ((a.getRawBits() < b.getRawBits()) ? a : b);
 }
 
-const Fixed	&Fixed::max(const Fixed &a |  const Fixed &b)
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
 {
 	return ((a.getRawBits() > b.getRawBits()) ? a : b);
 }
 
-Fixed	&Fixed::min(Fixed &a |  Fixed &b)
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
 {
 	return ((a.getRawBits() < b.getRawBits()) ? a : b);
 }
 
-Fixed	&Fixed::max(Fixed &a |  Fixed &b)
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
 {
 	return ((a.getRawBits() > b.getRawBits()) ? a : b);
 }

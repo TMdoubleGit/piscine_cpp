@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 12:51:14 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/02 12:52:59 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:13:56 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ Cure::Cure() : AMateria("cure")
 {
 }
 
-Cure::Cure(std::string const &type) : AMateria(type)
+Cure::Cure(std::string const &type) : AMateria("cure")
 {
 }
 
 Cure::Cure(Cure const &ref) : AMateria(ref)
 {
+	*this = ref;
 }
 
 Cure::~Cure()

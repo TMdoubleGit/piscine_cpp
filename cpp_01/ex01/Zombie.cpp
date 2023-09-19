@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 00:27:43 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/25 00:33:26 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Zombie::Zombie(void)
 
 Zombie::~Zombie()
 {
-	std::cout << this->name << " is dead |  definetely dead... RIP buruh!" << std::endl;
+	std::cout << this->name << " is dead, definetely dead... RIP buruh!" << std::endl;
 }
 
 void	Zombie::announce(){

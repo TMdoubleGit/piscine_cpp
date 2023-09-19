@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= ft_sed main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
 HEADER	= ft_sed.hpp 
 
 #Colors:

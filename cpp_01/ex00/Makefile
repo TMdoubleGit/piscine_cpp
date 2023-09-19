@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Zombie newZombie randomChump main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
 HEADER	= Zombie.hpp
 
 #Colors:

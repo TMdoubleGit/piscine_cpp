@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 12:07:31 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/21 16:24:44 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	while(cmd != "EXIT")
 	{
 		std::cout << "Please enter a command: " << std::flush;
-		std::getline(std::cin |  cmd);
+		std::getline(std::cin, cmd);
 		if (cmd == "EXIT")
 			break ;
 		if (cmd == "ADD")
@@ -33,7 +33,7 @@ int main(void)
 		else
 		{
 			std::cin.clear();
-			std::cout << "Invalid command |  please try again." << std::endl;
+			std::cout << "Invalid command, please try again." << std::endl;
 		}
 	}
 	std::cout << "Goodbye!" << std::endl;

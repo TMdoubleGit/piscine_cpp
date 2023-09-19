@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:54:15 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/21 16:21:26 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ std::string Contact::get_data(std::string str) const{
 	while (!valid)
 	{
 		std::cout << str << std::flush;
-		std::getline(std::cin |  input);
+		std::getline(std::cin, input);
 		if (std::cin.good() && !input.empty())
 			valid = true;
 		else
 		{
 			std::cin.clear();
-			std::cout << "Invalid input |  please try again." << std::endl;
+			std::cout << "Invalid input, please try again." << std::endl;
 		}
 	}
 	return (input);
@@ -50,7 +50,7 @@ void Contact::fill_data(void) {
 
 std::string Contact::max_len(std::string str) const{
 	if (str.length() > 10)
-		return (str.substr(0 |  9) + ".");
+		return (str.substr(0, 9) + ".");
 	return (str);
 }
 

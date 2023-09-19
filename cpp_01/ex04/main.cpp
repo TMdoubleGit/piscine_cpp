@@ -6,13 +6,13 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 13:16:15 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:12:30 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_sed.hpp"
 
-int	main(int ac |  char **av)
+int	main(int ac, char **av)
 {
 	if (ac != 4)
 	{
@@ -27,6 +27,6 @@ int	main(int ac |  char **av)
 		std::cerr << "Error: empty string" << std::endl;
 		return (1);
 	}
-	sed.ft_replace(av[2] |  av[3]);
+	sed.ft_replace(av[2], av[3]);
 	return (0);
 }

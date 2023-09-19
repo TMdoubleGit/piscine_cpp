@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:51:27 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:42:40 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ int main()
 	AForm* rrf;
 	AForm* fakeform;
 	
-	rrf = someRandomIntern.makeForm("RobotomyRequestForm" |  "Bender");
+	rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
 	std::cout << std::endl;
-	fakeform = someRandomIntern.makeForm("fake form" |  "Faker");
+	fakeform = someRandomIntern.makeForm("fake form", "Faker");
 	delete rrf;
 	delete fakeform;
 	std::cout << std::endl;
 	try {
 		std::cout << "----------ShrubberyCreationForm-----------" << std::endl;
-		Bureaucrat bureaucrat("Random mid employee" | 123);
+		Bureaucrat bureaucrat("Random mid employee",123);
 		ShrubberyCreationForm form1("Shrubbery");
 
 		bureaucrat.executeForm(form1);
@@ -42,7 +42,7 @@ int main()
 		std::cout << "------------------------------------------" << std::endl << std::endl;
 		
 		std::cout << "-----------RobotomyRequestForm------------" << std::endl;
-		Bureaucrat bureaucrat2("Senior executive" | 40);
+		Bureaucrat bureaucrat2("Senior executive",40);
 		RobotomyRequestForm form2("Random intern");
 		RobotomyRequestForm form3("An other random intern");
 
@@ -53,7 +53,7 @@ int main()
 		std::cout << "------------------------------------------" << std::endl << std::endl;
 		
 		std::cout << "----------PresidentialPardonForm----------" << std::endl;
-		Bureaucrat bureaucrat3("C-suite employee" | 26);
+		Bureaucrat bureaucrat3("C-suite employee",26);
 		PresidentialPardonForm form4("Ford Prefect");
 
 		bureaucrat3.signForm(form4);

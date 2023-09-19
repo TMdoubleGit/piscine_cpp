@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 00:31:32 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:18:17 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ int main(void){
 		valid = true;
 		if (N <= 0 || std::isdigit(N))
 		{
-			std::cout << "You can't summon " << N << " zombies |  you fool!" << std::endl;
+			std::cout << "You can't summon " << N << " zombies, you fool!" << std::endl;
 			std::cin.clear();
 			std::cin.ignore();
 			std::cout << "Please enter a correct value (integer > 0)" << std::endl;
 			valid = false;
 		}
 	}
-	std::cout << "Please |  give a name to your zombies: " << std::flush;
+	std::cout << "Please, give a name to your zombies: " << std::flush;
 	std::cin >> name;
-	Zombie* horde = zombieHorde(N |  name);
+	Zombie* horde = zombieHorde(N, name);
 	for (int i = 0; i < N; i++)
 		horde[i].announce();
 	delete [] horde;

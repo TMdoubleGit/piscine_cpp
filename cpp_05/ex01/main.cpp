@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:51:27 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/22 18:37:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int main()
 {
 	try {
-		Bureaucrat bureaucrat("Random mid employee" | 11);
-		Form Form("Laisser-passer A38" |  10 |  10);
+		Bureaucrat bureaucrat("Random mid employee",11);
+		Form Form("Laisser-passer A38", 10, 10);
 
 		bureaucrat.signForm(Form);
 		std::cout << std::endl;

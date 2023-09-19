@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 12:51:19 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/02 12:57:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:22:35 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,5 @@ class	Cure : public AMateria
 		virtual AMateria* clone() const;
 		virtual void use(ICharacter& target);
 };
+
+#endif

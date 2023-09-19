@@ -1,4 +1,4 @@
-NAME	= 
+NAME	= Recap
 
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -6,11 +6,11 @@ RM		= rm -rf
 
 OBJDIR	= .obj
 
-SRCS	= 
+SRCS	= AMateria Character Cure Ice MateriaSource main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
-HEADER	= 
+OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+HEADER	= AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m

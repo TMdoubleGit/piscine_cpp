@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:32:19 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:08:16 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Span
 		std::list<int>	getList() const;
 
 		void	addNumber(int n);
-		void	addNumber(std::list<int>::const_iterator begin |  std::list<int>::const_iterator end);
+		void	addNumber(std::list<int>::const_iterator begin, std::list<int>::const_iterator end);
 		int		shortestSpan() const;
 		int		longestSpan() const;
 		
@@ -52,6 +52,6 @@ class Span
 		};
 };
 
-std::ostream &operator<<(std::ostream &o |  const Span &src);
+std::ostream &operator<<(std::ostream &o, const Span &src);
 
 #endif

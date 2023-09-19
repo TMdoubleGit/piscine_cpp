@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Weapon HumanA HumanB main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
 HEADER	=  Weapon.hpp HumanA.hpp HumanB.hpp
 
 #Colors:
