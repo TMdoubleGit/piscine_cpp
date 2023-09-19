@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Zombie zombieHorde main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER	= Zombie.hpp
 
 #Colors:

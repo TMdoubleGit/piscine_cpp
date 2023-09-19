@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 08:10:53 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/01 11:30:59 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap()
 	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(std::string name) : _name(name) |  _hitPoints(10) |  _energyPoints(10) |  _attackDamage(0)
 {
 	std::cout << "ClapTrap " << name << " constructor called" << std::endl;
 }
@@ -34,7 +34,7 @@ void	ClapTrap::attack(std::string const &target)
 		std::cout << "ClapTrap " << _name << " can't attack because he has no energy points" << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << _name << " attacks " << target << " |  causing " << _attackDamage << " points of damage!" << std::endl;
 	_energyPoints += -1;
 }
 
@@ -42,7 +42,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if  (_hitPoints == 0)
 	{
-		std::cout << "ClapTrap " << _name << " has no HP left, rip ClapTrap " << _name << std::endl;
+		std::cout << "ClapTrap " << _name << " has no HP left |  rip ClapTrap " << _name << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << _name << " takes " << amount << " points of damage!" << std::endl;
@@ -53,7 +53,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if  (_hitPoints == 1)
 	{
-		std::cout << "ClapTrap " << _name << " just lost his last HP, rip ClapTrap " << _name << std::endl;
+		std::cout << "ClapTrap " << _name << " just lost his last HP |  rip ClapTrap " << _name << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << _name << " heals himself for " << amount << " points of damage!" << std::endl;

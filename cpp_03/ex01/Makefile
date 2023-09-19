@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= ClapTrap ScavTrap main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER	= ClapTrap.hpp ScavTrap.hpp
 
 #Colors:

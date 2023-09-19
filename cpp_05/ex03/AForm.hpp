@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 16:06:19 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/22 19:07:20 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AForm
 		AForm();
 
 	public:
-		AForm(std::string name, int gradeToSign, int gradeToExecute);
+		AForm(std::string name |  int gradeToSign |  int gradeToExecute);
 		AForm(AForm const &src);
 		virtual ~AForm();
 		AForm &operator=(AForm const &ref);
@@ -55,6 +55,6 @@ class AForm
 		};
 };
 
-std::ostream &operator<<(std::ostream &out, AForm const &ref);
+std::ostream &operator<<(std::ostream &out |  AForm const &ref);
 
 #endif

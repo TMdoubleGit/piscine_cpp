@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 11:22:27 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/23 14:54:23 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ Intern &Intern::operator=(Intern const &ref)
 	return *this;
 }
 
-AForm*	Intern::makeForm(std::string name, std::string target)
+AForm*	Intern::makeForm(std::string name |  std::string target)
 {
 	std::string formNames[] = {
-		"ShruberryCreationForm",
-		"RobotomyRequestForm",
+		"ShruberryCreationForm" | 
+		"RobotomyRequestForm" | 
 		"PresidentialPardonForm"
 	};
 	for (int i = 0; i < 3; i++)

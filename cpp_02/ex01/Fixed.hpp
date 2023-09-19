@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:26:08 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/07/28 03:58:54 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ class Fixed
 		void	setRawBits(int const raw);
 };
 
-std::ostream	&operator<<(std::ostream &os, const Fixed &ref);
+std::ostream	&operator<<(std::ostream &os |  const Fixed &ref);
 
 #endif

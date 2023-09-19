@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:51:27 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/22 14:47:15 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int main()
 {
     try
     {
-        Bureaucrat bureaucrat("CEO", 1);
-        Bureaucrat bureaucrat2("Intern", 150);
-        Bureaucrat bureaucrat3("Random mid employee", 75);
+        Bureaucrat bureaucrat("CEO" |  1);
+        Bureaucrat bureaucrat2("Intern" |  150);
+        Bureaucrat bureaucrat3("Random mid employee" |  75);
         std::cout << bureaucrat << std::endl;
         std::cout << bureaucrat2 << std::endl;
         std::cout << bureaucrat3 << std::endl;

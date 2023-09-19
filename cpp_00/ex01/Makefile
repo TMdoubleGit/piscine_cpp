@@ -10,7 +10,7 @@ OBJDIR		=	.obj
 SRCS 		= 	Contact PhoneBook main
 
 SRC 		= $(SRCS:=.cpp)
-OBJ 		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ 		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER		= Contact.hpp PhoneBook.hpp
 
 #Colors:

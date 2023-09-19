@@ -6,13 +6,13 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 11:44:19 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/22 18:13:39 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(const std::string name |  int grade) : _name(name) |  _grade(grade)
 {
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
@@ -59,9 +59,9 @@ void Bureaucrat::decrementGrade()
 	this->_grade++;
 }
 
-std::ostream &operator<<(std::ostream &out, Bureaucrat const &ref)
+std::ostream &operator<<(std::ostream &out |  Bureaucrat const &ref)
 {
-	out << ref.getName() << ", bureaucrat grade "<< ref.getGrade() << ".";
+	out << ref.getName() << " |  bureaucrat grade "<< ref.getGrade() << ".";
 	return (out);
 }
 

@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:26:11 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/07/28 04:01:51 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int		Fixed::toInt(void) const
 	return (_value >> _bits);
 }
 
-std::ostream	&operator<<(std::ostream &os, const Fixed &ref)
+std::ostream	&operator<<(std::ostream &os |  const Fixed &ref)
 {
 	os << ref.toFloat();
 	return (os);

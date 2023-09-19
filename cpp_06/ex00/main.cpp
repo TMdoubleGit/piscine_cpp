@@ -6,13 +6,13 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:27:45 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/11 16:15:45 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-int main(int ac, char **av)
+int main(int ac |  char **av)
 {
 	if (ac != 2)
 	{

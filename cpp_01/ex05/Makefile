@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Harl main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER	= Harl.hpp
 
 #Colors:

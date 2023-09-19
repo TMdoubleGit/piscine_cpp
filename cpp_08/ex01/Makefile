@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Span main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER	= Span.hpp
 
 #Colors:

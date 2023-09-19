@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER	= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 
 #Colors:

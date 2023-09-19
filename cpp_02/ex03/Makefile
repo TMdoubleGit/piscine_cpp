@@ -9,7 +9,7 @@ OBJDIR	= .obj
 SRCS	= Fixed Point bsp main
 
 SRC		= $(SRCS:=.cpp)
-OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
+OBJ		= $(addprefix $(OBJDIR)/ |  $(SRCS:=.o))
 HEADER	= Fixed.hpp Point.hpp
 
 #Colors:

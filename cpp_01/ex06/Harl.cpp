@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 15:36:58 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/07/26 16:04:15 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	Harl::debug(){
 
 void	Harl::info(){
 	std::cout << "[ INFO ]" << std::endl << std::flush;
-	std::cout << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl << std::flush;
+	std::cout << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did |  I wouldn't be asking for more!" << std::endl << std::flush;
 	std::cout << std::endl << std::flush;
 }
 
@@ -45,7 +45,7 @@ void	Harl::error(){
 }
 
 void	Harl::complain(std::string level){
-	std::string	levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+	std::string	levels[] = { "DEBUG" |  "INFO" |  "WARNING" |  "ERROR" };
 	int	i = 0;
 	while (i < 4 && levels[i].compare(level))
 		i++;

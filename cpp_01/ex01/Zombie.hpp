@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 16:47:29 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/07/25 00:34:06 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ class Zombie
 		~Zombie();
 		void	announce();
 		void	setName(std::string name);
-		Zombie* zombieHorde(int N, std::string name);
+		Zombie* zombieHorde(int N |  std::string name);
 };
 
-Zombie* zombieHorde(int N, std::string name);
+Zombie* zombieHorde(int N |  std::string name);
 
 #endif

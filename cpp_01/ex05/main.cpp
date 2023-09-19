@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 15:36:55 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/07/25 16:16:13 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(){
 	
 	while (level.compare("EXIT"))
 	{
-		std::cout << "Enter a level of complaint (DEBUG, INFO, WARNING, ERROR) or EXIT to exit: ";
+		std::cout << "Enter a level of complaint (DEBUG |  INFO |  WARNING |  ERROR) or EXIT to exit: ";
 		std::cin >> level;
 		harl.complain(level);
 	}

@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:40:48 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/18 16:00:23 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int main()
 		std::list<int> numbersToAdd;
 		for (int i = 0; i < 10000; i++)
 			numbersToAdd.push_back(i);
-		sp5.addNumber(numbersToAdd.begin(), numbersToAdd.end());
+		sp5.addNumber(numbersToAdd.begin() |  numbersToAdd.end());
 		std::cout << sp5 << std::endl;
 	}
 	catch (std::exception &e)

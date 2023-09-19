@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:27:45 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/12 18:57:29 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 		Base *o = generate();
 		std::cout << "Test " << i << ": ";
 		identify(o);
-		std::cout << ", ";
+		std::cout << " |  ";
 		identify(*o);
 		std::cout << std::endl;
 		delete o;

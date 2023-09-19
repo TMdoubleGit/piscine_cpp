@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 16:06:19 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/22 18:49:56 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Form
 		Form();
 
 	public:
-		Form(std::string name, int gradeToSign, int gradeToExecute);
+		Form(std::string name |  int gradeToSign |  int gradeToExecute);
 		Form(Form const &src);
 		~Form();
 		Form &operator=(Form const &ref);
@@ -49,6 +49,6 @@ class Form
 		};
 };
 
-std::ostream &operator<<(std::ostream &out, Form const &ref);
+std::ostream &operator<<(std::ostream &out |  Form const &ref);
 
 #endif

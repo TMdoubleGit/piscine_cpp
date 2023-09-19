@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 08:38:27 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/01 11:19:22 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::attack(std::string const &target)
 {
-	std::cout << "ScavTrap " << _name << " attack " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << _name << " attack " << target << " |  causing " << _attackDamage << " points of damage!" << std::endl;
 }
 
 void	ScavTrap::guardGate()

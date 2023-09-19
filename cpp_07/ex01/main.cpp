@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:27:45 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/13 17:34:34 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int main()
 {
-	int tab[] = { 0, 1, 2, 3, 4 };
-	iter(tab, 5, print);
+	int tab[] = { 0 |  1 |  2 |  3 |  4 };
+	iter(tab |  5 |  print);
 	std::cout << std::endl;
-	const char* tab2[] = {"Hello", "World", "!"};
-	iter(tab2, 3, print);
+	const char* tab2[] = {"Hello" |  "World" |  "!"};
+	iter(tab2 |  3 |  print);
 	return 0;
 }

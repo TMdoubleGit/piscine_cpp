@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:45:24 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/13 17:02:26 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 template <typename T>
 
-void	swap(T &x, T &y)
+void	swap(T &x |  T &y)
 {
 	T tmp;
 
@@ -28,13 +28,13 @@ void	swap(T &x, T &y)
 }
 
 template <typename T>
-T		max(T const &x, T const &y)
+T		max(T const &x |  T const &y)
 {
 	return (x > y ? x : y);
 }
 
 template <typename T>
-T		min(T const &x, T const &y)
+T		min(T const &x |  T const &y)
 {
 	return (x < y ? x : y);
 }

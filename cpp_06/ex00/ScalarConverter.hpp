@@ -20,11 +20,11 @@
 
 enum	input_type
 {
-	NONE,
-	CHAR,
-	INT,
-	FLOAT,
-	DOUBLE,
+	NONE | 
+	CHAR | 
+	INT | 
+	FLOAT | 
+	DOUBLE | 
 	LITERAL
 };
 
@@ -87,6 +87,6 @@ class ScalarConverter
 		};
 };
 
-std::ostream	&operator<<(std::ostream &out, ScalarConverter const &ref);
+std::ostream	&operator<<(std::ostream &out |  ScalarConverter const &ref);
 
 #endif

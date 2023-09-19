@@ -6,13 +6,13 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:06:32 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/07/19 14:10:21 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main(int argc, char **argv)
+int main(int argc |  char **argv)
 {
 	int i;
 	int j;

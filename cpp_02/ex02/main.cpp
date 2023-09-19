@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 04:14:18 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/04 11:05:45 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main( void ) {
 	
 	std::cout << b << std::endl;
 	
-	std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << Fixed::max( a |  b ) << std::endl;
 	
 	return 0;
 }

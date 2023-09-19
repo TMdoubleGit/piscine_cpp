@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 09:56:48 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/14 10:18:54 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ class   Array
 };
 
 template <typename T>
-std::ostream& operator<<(std::ostream &o, const Array<T> &array)
+std::ostream& operator<<(std::ostream &o |  const Array<T> &array)
 {
 	for (unsigned int i = 0; i < array.size(); i++)
 		o << array[i] << std::endl;

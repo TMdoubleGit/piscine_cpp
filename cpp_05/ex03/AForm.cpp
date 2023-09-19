@@ -6,17 +6,17 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 16:06:22 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/08/23 09:35:10 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-AForm::AForm() : _name("default"), _signed(false), _gradeToSign(150), _gradeToExecute(150)
+AForm::AForm() : _name("default") |  _signed(false) |  _gradeToSign(150) |  _gradeToExecute(150)
 {
 }
 
-AForm::AForm(std::string const name, int gradeToSign, int gradeToExecute) : _name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+AForm::AForm(std::string const name |  int gradeToSign |  int gradeToExecute) : _name(name) |  _signed(false) |  _gradeToSign(gradeToSign) |  _gradeToExecute(gradeToExecute)
 {
 	if (gradeToSign < 1 || gradeToExecute < 1)
 		throw AForm::GradeTooHighException();
@@ -24,7 +24,7 @@ AForm::AForm(std::string const name, int gradeToSign, int gradeToExecute) : _nam
 		throw AForm::GradeTooLowException();
 }
 
-AForm::AForm(AForm const &src) : _name(src.getName()), _signed(src.getSigned()), _gradeToSign(src.getGradeToSign()), _gradeToExecute(src.getGradeToExecute())
+AForm::AForm(AForm const &src) : _name(src.getName()) |  _signed(src.getSigned()) |  _gradeToSign(src.getGradeToSign()) |  _gradeToExecute(src.getGradeToExecute())
 {
 }
 
@@ -68,7 +68,7 @@ void AForm::beSigned(Bureaucrat const &ref)
 	this->_signed = true;
 }
 
-std::ostream &operator<<(std::ostream &out, AForm const &ref)
+std::ostream &operator<<(std::ostream &out |  AForm const &ref)
 {
 	std::string str;
 	if (ref.getSigned())

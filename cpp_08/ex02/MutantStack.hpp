@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:02:27 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/18 17:52:19 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:46:52 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <list>
 # include <deque>
 
-template <typename T, class Container = std::deque <T>>
-class MutantStack : public std::stack<T, Container>
+template <typename T |  class Container = std::deque <T>>
+class MutantStack : public std::stack<T |  Container>
 {
 	public:
 		MutantStack(){};
@@ -33,7 +33,7 @@ class MutantStack : public std::stack<T, Container>
 		
 		MutantStack &operator=(const MutantStack &src)
 		{
-			std::stack<T, Container>::operator=(src);
+			std::stack<T |  Container>::operator=(src);
 			return (*this);
 		};
 
