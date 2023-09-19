@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:16:11 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 15:51:04 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:41:05 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define BITCOINEXCHANGE_HPP
 
 # include <iostream>
+# include <string>
+# include <fstream>
+# include <sstream>
 # include <exception>
 # include <map>
 
