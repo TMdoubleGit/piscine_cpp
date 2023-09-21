@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:16:11 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/19 17:41:05 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:00:50 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class BitcoinExchange
 		
 		bool	checkDate(std::string const & str);
 		bool	checkValue(std::string const & str);
-		class InvalidDateException : public std::exception
+		class BadInputException : public std::exception
 		{
 			public:
 				virtual const char *what() const throw() { return ("Bad input => "); };
@@ -48,8 +48,6 @@ class BitcoinExchange
 			public:
 				virtual const char *what() const throw() { return ("Not a positive number"); };
 		};
-		}
-		
 }
 
 #endif
