@@ -6,11 +6,11 @@ RM		= rm -rf
 
 OBJDIR	= .obj
 
-SRCS	= main
+SRCS	= BitcoinExchange main
 
 SRC		= $(SRCS:=.cpp)
 OBJ		= $(addprefix $(OBJDIR)/, $(SRCS:=.o))
-HEADER	= .hpp
+HEADER	= BitcoinExchange.hpp
 
 #Colors:
 GREEN		=	\e[92;5;118m
