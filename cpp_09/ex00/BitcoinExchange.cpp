@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:16:15 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/22 16:55:10 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/25 14:36:59 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ BitcoinExchange::~BitcoinExchange()
 
 BitcoinExchange &BitcoinExchange::operator=(BitcoinExchange const &ref)
 {
-	if (this != &ref)
-		_wallet = ref._wallet;
+	(void)ref;
 	return (*this);
 }
 

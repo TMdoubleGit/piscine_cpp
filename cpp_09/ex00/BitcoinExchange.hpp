@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:16:11 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/22 16:52:09 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/25 14:36:50 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@
 # include <map>
 
 class BitcoinExchange
-{
-	private:
-		std::map<std::string, int> _wallet;
-	
+{	
 	public:
 		BitcoinExchange();
 		BitcoinExchange(BitcoinExchange const & src);
