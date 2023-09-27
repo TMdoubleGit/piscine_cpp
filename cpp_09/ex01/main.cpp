@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:40:48 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/25 17:07:56 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/26 14:08:37 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,11 @@ int	main(int ac, char **av)
 			}
 			stack.push(value);
 		}
+	}
+	if (stack.size() != 1)
+	{
+		std::cout << "Error: invalid RPN" << std::endl;
+		return 1;
 	}
 	std::cout << stack.top() << std::endl;
 }
