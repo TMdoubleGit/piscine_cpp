@@ -6,7 +6,7 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 14:40:48 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/22 16:37:51 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/28 10:48:10 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	main(int ac, char **av)
 				}
 				else
 				{
-					auto it = data.lower_bound(date);
+					std::map<std::string, float>::iterator it = data.lower_bound(date);
 					if (it != data.begin())
 					{
 						--it;
