@@ -6,99 +6,157 @@
 /*   By: tmichel- <tmichel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 09:46:02 by tmichel-          #+#    #+#             */
-/*   Updated: 2023/09/28 15:16:14 by tmichel-         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:15:53 by tmichel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 
-template <typename Container>
-PmergeMe<Container>::PmergeMe()
+template <typename T>
+PmergeMe<T>::PmergeMe()
 {
 }
 
-template <typename Container>
-PmergeMe<Container>::PmergeMe(PmergeMe const & src)
+template <typename T>
+PmergeMe<T>::PmergeMe(const PmergeMe& src)
 {
-	*this = src;
+    *this = src;
 }
 
-template <typename Container>
-PmergeMe<Container>::~PmergeMe()
+template <typename T>
+PmergeMe<T>::~PmergeMe()
 {
 }
 
-template <typename Container>
-PmergeMe<Container> & PmergeMe<Container>::operator=(PmergeMe const & rhs)
+template <typename T>
+PmergeMe<T>& PmergeMe<T>::operator=(const PmergeMe& rhs)
 {
-	(void)rhs;
-	return *this;
+    (void)rhs;
+    return *this;
 }
 
-template <typename Container>
-Container PmergeMe<Container>::createAndSortPairs(const Container &input)
+template <typename T>
+std::vector<std::pair<typename T::value_type, typename T::value_type>> 
+PmergeMe<T>::createAndSortPairs(const T &input)
 {
-	Container pairs;
-	for (size_t i = 0; i < input.size(); i += 2)
-	{
-		if (i + 1 < input.size())
-		{
-			int first = input.at(i);
-			int second = input.at(i + 1);
-			if (first > second)
-				std::swap(first, second);
-			pairs.push_back(std::make_pair(first, second));
-		}
-		else
-		{
-			pairs.push_back(std::make_pair(input.at(i), std::numeric_limits<int>::max()));
-		}
-	}
-	return pairs;
+    std::vector<std::pair<typename T::value_type, typename T::value_type>> pairs;
+    typename T::const_iterator it = input.begin();
+    while(it != input.end())
+    {
+        typename T::value_type first = *it;
+        ++it;
+
+        typename T::value_type second;
+        if(it != input.end())
+        {
+            second = *it;
+            ++it;
+        }
+        else
+        {
+            second = std::numeric_limits<typename T::value_type>::max();
+        }
+
+        if(first > second)
+            std::swap(first, second);
+
+        pairs.push_back(std::make_pair(first, second));
+    }
+    return pairs;
 }
 
-template <typename Container>
-Container PmergeMe<Container>::sort(const Container &input)
+template <typename T>
+T PmergeMe<T>::sort(const T &input)
 {
-	this->_duration_deque = clock();
-	std::deque< std::pair<int, int> > pairs = createAndSortPairs(input);
+    this->_duration_list = clock();
+    this->_duration_deque = clock();
+    std::vector<std::pair<int, int> > pairs = createAndSortPairs(input);
+
+    T sortedList;
+
+    for(size_t i = 0; i < pairs.size(); ++i)
+    {
+        sortedList.push_back(pairs[i].first);
+        if(pairs[i].second != std::numeric_limits<int>::max())
+        {
+            sortedList.push_back(pairs[i].second);
+        }
+    }
+	
+	std::sort(sortedList.begin(), sortedList.end());
+
+    this->_duration_list = clock() - this->_duration_list;
+    this->_duration_list = ((float)(this->_duration_list) / CLOCKS_PER_SEC) * 1000000;
 	this->_duration_deque = clock() - _duration_deque;
-	this->_duration_deque = ((float)(this->_duration_deque) / CLOCKS_PER_SEC) * 1000000;
-	this->_duration_list = clock();
-	Container sortedList;
-
-	for (size_t i = 0; i < pairs.size(); ++i)
-	{
-		sortedList.push_back(pairs[i].first);
-	}
-
-	sortedList.sort();
-
-	for (size_t i = 0; i < pairs.size(); ++i)
-	{
-		if(pairs[i].second != std::numeric_limits<int>::max())
-		{
-			std::list<int>::iterator it = sortedList.begin();
-			while(it != sortedList.end() && *it < pairs[i].second)
-			{
-				++it;
-			}
-			sortedList.insert(it, pairs[i].second);
-		}
-	}
-	this->_duration_list = clock() - this->_duration_list;
-	this->_duration_list = ((float)(this->_duration_list) / CLOCKS_PER_SEC) * 1000000;
-	return sortedList;
+    this->_duration_deque = ((float)(this->_duration_deque) / CLOCKS_PER_SEC) * 1000000;
+    return sortedList;
 }
 
-template <typename Container>
-clock_t PmergeMe<Container>::getDurationDeque()
+template <>
+std::list<int> PmergeMe<std::list<int>>::sort(const std::list<int> &input)
 {
-	return (this->_duration_deque);
+    this->_duration_list = clock();
+    this->_duration_deque = clock();
+    std::vector<std::pair<int, int> > pairs = createAndSortPairs(input);
+
+    std::list<int> sortedList;
+
+    for(size_t i = 0; i < pairs.size(); ++i)
+    {
+        sortedList.push_back(pairs[i].first);
+        if(pairs[i].second != std::numeric_limits<int>::max())
+        {
+            sortedList.push_back(pairs[i].second);
+        }
+    }
+	
+    sortedList.sort();
+
+    this->_duration_list = clock() - this->_duration_list;
+    this->_duration_list = ((float)(this->_duration_list) / CLOCKS_PER_SEC) * 1000000;
+	this->_duration_deque = clock() - _duration_deque;
+    this->_duration_deque = ((float)(this->_duration_deque) / CLOCKS_PER_SEC) * 1000000;
+    return sortedList;
 }
 
-template <typename Container>
-clock_t PmergeMe<Container>::getDurationList()
+template <>
+std::deque<int> PmergeMe<std::deque<int>>::sort(const std::deque<int> &input)
 {
-	return (this->_duration_list);
+    this->_duration_list = clock();
+    this->_duration_deque = clock();
+    std::vector<std::pair<int, int> > pairs = createAndSortPairs(input);
+
+    std::deque<int> sortedList;
+
+    for(size_t i = 0; i < pairs.size(); ++i)
+    {
+        sortedList.push_back(pairs[i].first);
+        if(pairs[i].second != std::numeric_limits<int>::max())
+        {
+            sortedList.push_back(pairs[i].second);
+        }
+    }
+	
+    std::sort(sortedList.begin(), sortedList.end());
+
+    this->_duration_list = clock() - this->_duration_list;
+    this->_duration_list = ((float)(this->_duration_list) / CLOCKS_PER_SEC) * 1000000;
+	this->_duration_deque = clock() - _duration_deque;
+    this->_duration_deque = ((float)(this->_duration_deque) / CLOCKS_PER_SEC) * 1000000;
+    return sortedList;
 }
+
+template <typename T>
+clock_t PmergeMe<T>::getDurationDeque()
+{
+    return this->_duration_deque;
+}
+
+template <typename T>
+clock_t PmergeMe<T>::getDurationList()
+{
+    return this->_duration_list;
+}
+
+template class PmergeMe<std::list<int>>;
+template class PmergeMe<std::deque<int>>;
